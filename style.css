@@ -1,0 +1,164 @@
+.grid-container {
+  display: grid;
+  /*grid-template-columns: 200px 100px;*/
+  /*grid-template-columns: 2fr 1fr; similar to flexgrow 2f means it will take twice as much of white-space*/
+  /* grid-template-columns: repeat(
+    4,
+    100px
+  ); */ /*this will make 4 columns of the same sizes*/
+
+  /* grid-template-rows: 200px 150px; 1st row 200px and second row 150px
+ grid-auto-rows: 150px; this will be the default size for rows that are not defined in the grid template rows for example the first row will 200 px and 2nd will be 150 the third one will  be 150px*/
+
+  /* grid-auto-rows: minmax(150px,auto) If we want our row to grow to fit the content but still be a 150 px minimum in size (grid-auto-rows) - use minmax(150px,auto)= minimum size of our row to be 150px, auto means it will fills the amount of space to fit its content. Else the content wont fit the container*/
+  /*
+  grid-template-columns: 200px 250px;
+  grid-auto-rows: minmax(150px, auto);
+  
+  row-gap: 20px;
+  column-gap: 10px;
+  gap: 15px;*/
+
+  /*layout column and rows*/
+  /*
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "sidebar content";*/
+  grid-template-columns: 200px 250px;
+  grid-auto-rows: minmax(150px, auto);
+  gap: 15px;
+  /*
+  justify-content: stretch; this is because the grid item wont grow so it does not change anything
+  align-content: stretch;
+  height: 100vh;
+  border-color: aqua;
+  border-style: solid;*/
+  justify-items: stretch;
+  align-items: stretch;
+}
+.grid-item-1 {
+  align-self: start;
+  justify-self: center;
+}
+
+/*
+.grid-item-1 {
+   grid-area: header; entire first row will take the space of first row
+  grid-column: 1 / -1;
+}
+
+.grid-item-2 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.grid-item-3 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.grid-item-4 {
+}
+.grid-item-5 {
+}*/
+
+/* Background Styles Only */
+
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+* {
+  font-family: Raleway;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #333;
+  height: 100%;
+  margin: 0;
+}
+
+.grid-container {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+
+.grid-item {
+  position: relative;
+  font-size: 25px;
+  padding: 20px;
+  padding-top: 50px;
+  background-color: #379ad6;
+  color: #222;
+  border: 1px solid white;
+}
+
+.grid-item:nth-child(odd) {
+  background-color: #5bbdfa;
+}
+
+.grid-item::before {
+  content: "Grid Item";
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+  top: 10px;
+  left: 15px;
+}
+
+.grid-item::after {
+  position: absolute;
+  font-size: 25px;
+  top: 10px;
+  right: 15px;
+  font-weight: bold;
+}
+
+.grid-item-1::after {
+  content: "1";
+}
+
+.grid-item-2::after {
+  content: "2";
+}
+
+.grid-item-3::after {
+  content: "3";
+}
+
+.grid-item-4::after {
+  content: "4";
+}
+
+.grid-item-5::after {
+  content: "5";
+}
+
+.grid-item-6::after {
+  content: "6";
+}
+
+.grid-item-7::after {
+  content: "7";
+}
+
+.grid-item-8::after {
+  content: "8";
+}
+
+.grid-item-9::after {
+  content: "9";
+}
+
+.grid-item-10::after {
+  content: "10";
+}
+
+.grid-item-11::after {
+  content: "11";
+}
